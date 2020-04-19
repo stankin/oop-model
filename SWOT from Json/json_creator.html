@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Создание Json для SWOT</title>
+	<style type="text/css">
+		@import url("styles.css");
+	</style>
+		<script src="scripts_json_creator.js"></script>
+</head>
+
+<body>
+	<a id="href_goMainMenu" href="index.html" style="display: none"></a>
+	<h1 align="center">Создание Json-файла для SWOT-анализа</h1>
+	<div align="center" class="text">
+		<p>
+			Именование фактора: 
+			<input class="input_style" id="input_factorName">
+		</p>
+		
+	</div>
+	
+<table border="1" align="center" class="table_style">
+  <tbody>
+    <tr class="headline">
+      <th scope="col">&nbsp;</th>
+      <th scope="col">&nbsp; Положительное влияние</th>
+      <th scope="col">&nbsp; Отрицательное влияние</th>
+    </tr>
+    <tr>
+      <td>&nbsp;Внутренняя среда</td>
+      <td>&nbsp; 
+		  <div contenteditable="true" style="width: 100%;">
+		  	<textarea id='area_W-O'></textarea>
+		</div>
+	</td>
+      <td>&nbsp;
+		<div contenteditable="true" style="width: 100%;">
+		  	<textarea id='area_S-O'></textarea>
+		</div>
+		</td>
+    </tr>
+    <tr>
+      <td>&nbsp; Внешняя среда</td>
+      <td>&nbsp;
+		<div contenteditable="true" style="width: 100%;">
+		  	<textarea id='area_S-T'></textarea>
+		</div>
+		</td>
+      <td>&nbsp;
+		<div contenteditable="true" style="width: 100%;">
+		  	<textarea id='area_W-T'></textarea>
+		</div>
+		</td>
+    </tr>
+  </tbody>
+</table>
+	<button class="button" onClick="getJson()">Получить Json-файл</button>
+	<button class="button" onClick="mainMenu()">Вернуться на главную</button>
+</body>
+</html>

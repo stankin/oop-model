@@ -1,0 +1,66 @@
+.gradient {
+	background: noon;
+}
+
+.logo {
+	margin: 1px;
+	text-align: center;
+}			
+
+.button {
+	margin: auto;
+	margin-top: 20px;
+	display: block;
+	text-align: center;
+	background: noon;
+
+	width: 300px;
+	height: 50px;
+}
+
+.upload_icon {
+	width: 15px;
+	height: 15px;
+}
+
+.table_style {
+	font-family: monospace;
+	font-size: 18px;
+	margin: auto;
+	margin-top: 20px;
+	text-align: center;
+	width: center;
+}
+
+.input_style{
+	font-family: monospace;
+	font-size: 18px;
+	margin: auto;
+	margin-top: 20px;
+	text-align: left;
+	width:600px;
+}
+
+.text{
+	font-family: monospace;
+	font-size: 18px;
+}
+table,
+th,
+tr {
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+
+.headline {
+	background-color: rgba(102, 239, 52, 0.5)
+}
+
+tr {
+	height: auto;
+}
+
+textarea{
+	width: 300px; 
+	height: 100px;
+}

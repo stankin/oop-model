@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css" >
+    <script src="scripts_index.js"></script>
+</head>
+
+<body class="gradient">
+    <input id="file-input" type="file" onchange="handleFileSelect(this.files)" style="display: none" accept=".json" />
+    <a id = "getTestFile" style="display: none" href="https://yadi.sk/d/VVA62Siwy2ziCg" download=""></a>
+	<a id = "goTo_json_creator" style="display: none" href="json_creator.html"></a>
+	
+    <button id='upload_button' class="button" onclick="showFileInput()">
+        <img class="upload_icon" src="https://img.icons8.com/metro/26/000000/upload.png" width="40" height="40"> 
+		Загрузить файл JSON
+    </button>
+	
+	    <button id='upload_testFile_button' class="button" onclick="loadTestFile()">
+        Скачать тестовый файл JSON
+    </button>
+	
+	<button id='goTo_json_creator_button' class="button" onclick="goTo_json_creator()">
+        Создать свой файл JSON для SWOT
+    </button>
+
+    <table id='table' class="table_style" style="display: none">
+        <tr class="headline">
+            <th></th>
+            <th>Положительное влияние</th>
+            <th>Отрицательное влияние</th>
+        </tr>
+        <tr>
+            <th>Внутренняя среда</th>
+            <th id='S-O'>
+                <ul id='ul-id1'>
+                </ul>
+            </th>
+            <th id='W-O'>
+                <ul id='ul-id2'>
+
+                </ul>
+            </th>
+        </tr>
+        <tr>
+            <th>Внешняя среда</th>
+            <th id='S-T'>
+                <ul id='ul-id3'>
+
+                </ul>
+            </th>
+            <th id='W-T'>
+                <ul id='ul-id4'>
+
+                </ul>
+            </th>
+        </tr>
+</body>
+
+</html>
