@@ -6,4 +6,4 @@
 [json-файл](https://github.com/stankin/oop-model/blob/master/JSON2M5/data.json) <br>
 Просто открыть сайт, загрузить в него json-файл и клик по "Найти точки отказа"  <br>
 В папке model содержится описание процессов (модели в форматах .png и .rsf) <br>
-Логика работы сайта находятся в файле [index.html](https://github.com/stankin/oop-model/blob/master/JSON2M5/index.html) и файлах в директории [js](https://github.com/stankin/oop-model/tree/master/JSON2M5/js)
+Логика работы сайта находится в файле [index.html](https://github.com/stankin/oop-model/blob/master/JSON2M5/index.html) и файлах в директории [js](https://github.com/stankin/oop-model/tree/master/JSON2M5/js)
