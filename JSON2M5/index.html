@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="js/vue.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="js/v-jsoneditor.min.js"></script>
+		<script src="js/element.js"></script>
+    <meta charset="UTF-8"></meta>
+		<!-- import CSS -->
+    <link rel="stylesheet" href="css/element.css"></link>
+		<style>
+html {
+	height: 98%
+}
+
+	#app {
+		height: 100%;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: normal;
+		font-style: normal;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		color: #2c3e50;
+	}
+
+  #app .centered {
+    margin-top: 15%;
+    margin-left: 40%;
+    width: 26%;
+  }
+
+  #app .right-aligned {
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 2%;
+  }
+
+	#app .row {
+		width: 100%;
+		margin-top: 10px;
+		padding: 5px;
+	}
+		</style>
+	</head>
+	<body style="height: 100%">
+		<div id="app">
+      <el-container>
+        <el-main style="display: flex"> 
+          <el-card :class="display_style" shadow="always">
+            <el-upload
+              drag
+              :before-upload="fileCheck" 
+              action="#"
+              :file-list="fileList">
+              <i class="el-icon-upload"></i>
+              <div class="el-upload__text">Перетащите сюда файл или <em>кликните для выгрузки</em></div>
+              <div class="el-upload__tip" slot="tip">Файл в формате JSON, не более 500kb</div>
+            </el-upload>
+            <el-button size="mini" 
+                       style="margin-top: 2%"
+              @click="failureScan(json)" type="success" v-if="json" plain>Найти точки отказов</el-button>
+            <el-table :data="data" size="mini" 
+                       style="margin-top: 2%"
+                       v-if="data.length > 0" 
+                       border stripe max-height="280px">
+              <el-table-column prop="title" label="Процесс">
+              </el-table-column>
+            </el-table>
+          </el-card>
+          <el-card v-if="json" style="width: 55%; margin-top: 1%">
+            <v-jsoneditor
+              v-model="json" :options="options" :plus="false" :height="height" @error="onError">
+            </v-jsoneditor>
+          </el-card>
+        </el-main>
+        <el-dialog :visible.sync="dialog" width="75%">
+          <el-card shadow="always">
+            <el-table :data="table_data" border stripe size="mini" max-height="400">
+              <el-table-column label="Mission" prop="mission">
+              </el-table-column>
+              <el-table-column label="Machine" width="190">
+                <template slot-scope="scope">
+                  <el-tag size="mini" v-for="m in scope.row.machine" :key="m" v-if="m">{{m}}</el-tag>
+                </template>
+              </el-table-column>
+              <el-table-column label="Man" width="190">
+                <template slot-scope="scope">
+                  <el-tag size="mini" v-for="m in scope.row.man" type="success" :key="m" v-if="m">{{m}}</el-tag>
+                </template>
+              </el-table-column>
+              <el-table-column label="Management"width="190">
+                <template slot-scope="scope">
+                  <el-tag size="mini" v-for="m in scope.row.management" type="warning" :key="m" v-if="m">{{m}}</el-tag>
+                </template>
+              </el-table-column>
+              <el-table-column label="Material" width="250">
+                <template slot-scope="scope">
+                  <el-tag size="mini" v-for="m in scope.row.material" type="info" :key="m" v-if="m">{{m}}</el-tag><br/>
+                </template>
+              </el-table-column>
+            </el-table>
+          </el-card>
+        </el-dialog>
+      </el-container>
+		</div>
+		<script src="js/main.js"></script>
+		<!-- import JavaScript -->
+	</body>
+</html>
