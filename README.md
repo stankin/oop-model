@@ -3,7 +3,7 @@
 * конвертор json полной модели --> json для отображения IDEF0
 * конвертор json полной модели --> json для отображения UML Class
 * [конвертор json --> XML](https://github.com/stankin/oop-model/wiki/Json-to-XML)
-* ...
+* [конвертор json --> 5M, Исикава](https://github.com/stankin/oop-2018/wiki/Задача-№10-(5M,-Исикава))
 
 Смежные проекты:
 * [Основное приложение работы с моделями](https://github.com/stankin/oop-app)
