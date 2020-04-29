@@ -5,7 +5,7 @@
 [Стори](https://github.com/stankin/oop-model/issues/108)
 <br>
 [Сайт](https://bobs4462.github.io/) <br>
-[json-файл](https://github.com/stankin/oop-model/blob/master/JSON2M5/data.json) <br>
+[Пример (json-файл)](https://github.com/stankin/oop-model/blob/master/JSON2M5/data.json) <br>
 Просто открыть сайт, загрузить в него json-файл и клик по "Найти точки отказа"  <br>
 В папке model содержится описание процессов (модели в форматах .png и .rsf) <br>
 Логика работы сайта находится в файле [index.html](https://github.com/stankin/oop-model/blob/master/JSON2M5/index.html) и файлах в директории [js](https://github.com/stankin/oop-model/tree/master/JSON2M5/js)
