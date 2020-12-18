@@ -111,4 +111,3 @@ class CalcData {
           ["SF", SF], ["E", E], ["EM", EM], ["PM", PM.toFixed(1)], ["TDEV", TDEV.toFixed(1)]
       ]);
   }
-}
